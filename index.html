@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Gad Abaka</title>
 </head>
 <body>
@@ -12,21 +14,29 @@
             <a href="#" class="nav-logo">
                 <img src="assets/images/logo2.png" alt="logo" class="logo-image">
             </a>
+            <!-- Mobile menu  -->
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir ou fermer le menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="" class="nav-link">Accueil</a>
+                    <a href="#" class="nav-link">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">A propos</a>
+                    <a href="#about" class="nav-link">A propos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Témoignages</a>
+                    <a href="#testimonials" class="nav-link">Témoignages</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Livres</a>
+                    <a href="#books" class="nav-link">Livres</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -49,6 +59,9 @@
 
                 <div class="hero-image-wrapper">
                     <img src="assets/images/resilience mockup.png" alt="Cover" class="hero-image">
+
+    <!-- photo sticker  -->
+                    <img src="assets/images/Elegant Burgundy Book Badge.png" alt="Maintenant disponible" class="available-sticker">
                 </div>
             </div>
         </section>
@@ -75,10 +88,20 @@
                 chaque lecteur à avancer malgré les défis de la vie.
             </p>
 
+            <!-- Social links  -->
+
             <div class="social-link-list">
-                <a href="#" class="social-link">FB</a>
-                <a href="#" class="social-link">IG</a>
-                <a href="#" class="social-link">YT</a>
+                <a href="https://www.facebook.com/gadabakaofficiel" class="social-link">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/gad_abaka/" class="social-link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@gad_abaka" class="social-link">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
             </div>
 
         </div>
@@ -190,7 +213,7 @@
                         sur les relations humaines.
                     </p>
 
-                    <a href="#"
+                    <a href="https://a.co/d/06WqPXvM"
                        class="book-button">
                         Découvrir le livre &#8594;
                     </a>
@@ -216,7 +239,7 @@
                         l'espérance et la persévérance.
                     </p>
 
-                    <a href="#"
+                    <a href="https://a.co/d/0fmrodCz"
                        class="book-button">
                         Découvrir le livre &#8594;
                     </a>
@@ -252,27 +275,27 @@
                 <div class="contact-info-list">
 
                     <div class="contact-info-item">
-                        <span class="contact-icon">✉</span>
-                        <a href="mailto:contact@exemple.com">
-                            contact@exemple.com
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:contact@example.com">
+                            book@gadabaka.com
                         </a>
-                    </div>
+                </div>
 
-                    <div class="contact-info-item">
-                        <span class="contact-icon">☎</span>
-                        <a href="tel:+15060000000">
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+15060000000">
                             +1 (506) 000-0000
-                        </a>
-                    </div>
+                    </a>
+                </div>
 
-                    <div class="contact-info-item">
-                        <span class="contact-icon">⌖</span>
-                        <p>Canada</p>
-                    </div>
-
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Canada</p>
                 </div>
 
             </div>
+
+        </div>
 
             <!-- Social media  -->
 
@@ -287,18 +310,19 @@
 
                 <div class="social-link-list">
 
-                    <a href="#" class="social-link">
-                        Facebook
-                    </a>
+                    <div class="social-link-list">
+                        <a href="https://www.facebook.com/gadabakaofficiel" class="social-link">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
 
-                    <a href="#" class="social-link">
-                        Instagram
-                    </a>
+                        <a href="https://www.instagram.com/gad_abaka/" class="social-link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
 
-                    <a href="#" class="social-link">
-                        YouTube
-                    </a>
-
+                        <a href="https://www.youtube.com/@gad_abaka" class="social-link">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -310,7 +334,7 @@
 
 <!-- Footer section  -->
 
-<footer class="footer-section">
+<footer class="footer-section" id="contact">
     <div class="section-content">
 
         <p class="copyright-text">
@@ -318,15 +342,25 @@
         </p>
 
         <div class="footer-social">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
+            <div class="social-link-list">
+                <a href="https://www.facebook.com/gadabakaofficiel" class="social-link">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/gad_abaka/" class="social-link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@gad_abaka" class="social-link">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
         </div>
 
         <div class="footer-links">
             <a href="#">Confidentialité</a>
             <span>•</span>
-            <a href="mailto:contact@exemple.com">Contact</a>
+            <a href="mailto:books@gadabaka0.com">Contact</a>
         </div>
 
     </div>

@@ -11,6 +11,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ul {
     list-style: none;
 }
@@ -78,6 +82,7 @@ header{
     width: 100%;
     z-index: 5;
     background: var(--primary-color);
+    
 }
 
 header .navbar{
@@ -128,19 +133,72 @@ header .navbar{
     justify-content: space-between;
 }
 
+/* Hero image  */
+
 .hero-section .hero-image-wrapper {
+    position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
-    /* max-width: 500px; */
-    /* background-color: #252525; */
+    max-width: 500px;
 }
 
 .hero-section .hero-image {
     width: 100%;
-    max-width: 500px;
     height: auto;
-    justify-content: flex-end;
+    display: block;
+}
+
+/* photo sticker  */
+
+
+.hero-section .available-sticker {
+    position: absolute;
+    top: 0;
+    right: 130px;
+    width: 150px;
+    height: auto;
+    z-index: 2;
+    transform: translate(20%, -15%) rotate(12deg);
+    animation: sticker-animation 5s ease-in-out infinite;
+}
+
+/* Sticker animation  */
+
+@keyframes sticker-animation {
+    0%, 16% {
+        opacity: 1;
+        transform: translate(20%, -15%) scale(1) rotate(12deg);
+    }
+
+    6% {
+        opacity: 1;
+        transform: translate(20%, -15%) scale(1.15) rotate(0deg);
+    }
+
+    12% {
+        opacity: 1;
+        transform: translate(20%, -15%) scale(1) rotate(12deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(20%, -15%) scale(1) rotate(12deg);
+    }
+}
+
+/* Reduced motion  */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-section .available-sticker {
+        animation: none;
+    }
+}
+
+/* Sticker hover  */
+
+.hero-section .available-sticker:hover {
+    filter: brightness(1.15);
 }
 
 .hero-section .hero-details {
@@ -220,10 +278,12 @@ header .navbar{
 }
 
 .about-section .about-image-wrapper .about-image {
-    width: 100%;
-    height: 100%;
+    width: 380px;
+    height: 480px;
     object-fit: cover;
-    border-radius: var(--border-radius-cirdle);
+    object-position: center 30%;
+    border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+    padding-bottom: 50px;
 }
 
 /* About details  */
@@ -279,6 +339,18 @@ header .navbar{
 }
 
 .about-section .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Social icons  */
+
+.social-link {
+    color: var(--primary-color);
+    font-size: 40px;
+    transition: color .3s ease;
+}
+
+.social-link:hover {
     color: var(--secondary-color);
 }
 

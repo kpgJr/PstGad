@@ -1,0 +1,702 @@
+/* =========================================
+   Responsive styling
+========================================= */
+
+/* General responsive fixes  */
+
+html {
+    scroll-padding-top: 90px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hero-section .hero-details,
+.hero-section .hero-image-wrapper,
+.about-section .about-details,
+.contact-section .contact-info,
+.contact-section .contact-social {
+    min-width: 0;
+}
+
+
+/* Mobile navigation  */
+
+.navbar .nav-toggle {
+    display: none;
+}
+
+.navbar .nav-toggle-label {
+    display: none;
+    color: var(--white-color);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   Large tablets and small laptops
+========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    /* Navbar section  */
+
+    .navbar .nav-logo .logo-image {
+        width: 160px;
+    }
+
+    .navbar .nav-menu {
+        gap: 2px;
+    }
+
+    .navbar .nav-menu .nav-link {
+        padding: 10px 12px;
+        font-size: var(--font-size-s);
+    }
+
+    /* Hero section  */
+
+    .hero-section .hero-details {
+        flex: 1;
+    }
+
+    .hero-section .hero-details .subtitle {
+        max-width: 100%;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 420px;
+    }
+
+    .hero-section .available-sticker {
+        width: 115px;
+        right: 20%;
+    }
+
+    /* About section  */
+
+    .about-section .section-content {
+        gap: 45px;
+    }
+
+    .about-section .about-image-wrapper {
+        width: 340px;
+        height: 420px;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0;
+    }
+
+    /* Testimonials section  */
+
+    .testimonials-section .testimonials-container {
+        gap: 15px;
+    }
+
+    .testimonials-section .testimonials-list {
+        gap: 25px;
+    }
+
+    .testimonials-section .testimonial .user-image {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* Books section  */
+
+    .books-section .books-list {
+        gap: 60px;
+    }
+
+    .books-section .book-item {
+        width: min(350px, 45%);
+    }
+
+    /* Contact section  */
+
+    .contact-section .contact-container {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================
+   Tablets
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    /* General section  */
+
+    .section-content {
+        padding: 0 30px;
+    }
+
+    /* Navbar section  */
+
+    header .navbar {
+        padding: 15px 30px;
+    }
+
+    .navbar .nav-logo .logo-image {
+        width: 155px;
+    }
+
+    .navbar .nav-toggle-label {
+        display: block;
+        z-index: 10;
+    }
+
+    .navbar .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+        padding: 15px 25px 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        background: var(--primary-color);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition: opacity .3s ease,
+                    transform .3s ease,
+                    visibility .3s ease;
+    }
+
+    .navbar .nav-toggle:checked ~ .nav-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navbar .nav-menu .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .nav-menu .nav-link {
+        display: block;
+        padding: 12px 20px;
+        font-size: var(--font-size-n);
+    }
+
+    /* Hero section  */
+
+    .hero-section .section-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        gap: 45px;
+        padding-top: 140px;
+        padding-bottom: 70px;
+    }
+
+    .hero-section .hero-details {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .hero-section .hero-details .title {
+        font-size: var(--font-size-xl);
+    }
+
+    .hero-section .hero-details .subtitle {
+        max-width: 100%;
+        margin: 15px 0 25px;
+        font-size: var(--font-size-l);
+    }
+
+    .hero-section .hero-details .description {
+        line-height: 1.8;
+    }
+
+    .hero-section .hero-details .description br {
+        display: none;
+    }
+
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .hero-section .hero-image-wrapper {
+        width: 100%;
+        max-width: 420px;
+        flex: none;
+    }
+
+    .hero-section .available-sticker {
+        width: 110px;
+        right: 20%;
+        top: 0;
+    }
+
+    /* About section  */
+
+    .about-section {
+        padding: 80px 0;
+    }
+
+    .about-section .section-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-section .about-image-wrapper {
+        width: 320px;
+        height: 390px;
+        flex-shrink: 0;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        padding-bottom: 0;
+    }
+
+    .about-section .about-details {
+        max-width: 650px;
+        text-align: center;
+    }
+
+    /* Testimonials section  */
+
+    .testimonials-section {
+        padding: 70px 0 80px;
+    }
+
+    .testimonials-section .section-title {
+        margin-bottom: 55px;
+    }
+
+    .testimonials-section .testimonials-list {
+        gap: 20px;
+    }
+
+    .testimonials-section .testimonial .user-image {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 20px;
+    }
+
+    .testimonials-section .testimonial .feedback {
+        font-size: 0.85rem;
+    }
+
+    .testimonials-section .slider-button {
+        font-size: 25px;
+    }
+
+    /* Books section  */
+
+    .books-section {
+        padding: 80px 0 90px;
+    }
+
+    .books-section .books-list {
+        gap: 35px;
+        margin-top: 60px;
+    }
+
+    .books-section .book-item {
+        width: 45%;
+    }
+
+    .books-section .book-image-wrapper {
+        height: 350px;
+    }
+
+    /* Contact section  */
+
+    .contact-section {
+        padding: 70px 0 80px;
+    }
+
+    .contact-section .section-title {
+        margin-bottom: 55px;
+    }
+
+    .contact-section .contact-container {
+        gap: 35px;
+    }
+
+    .contact-section .contact-info,
+    .contact-section .contact-social {
+        width: 50%;
+    }
+
+    /* Footer section  */
+
+    .footer-section .section-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================
+   Mobile phones
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* General section  */
+
+    .section-content {
+        padding: 0 20px;
+    }
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    /* Navbar section  */
+
+    header .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar .nav-logo .logo-image {
+        width: 135px;
+    }
+
+    .navbar .nav-toggle-label {
+        font-size: 24px;
+    }
+
+    /* Hero section  */
+
+    .hero-section .section-content {
+        min-height: 100svh;
+        gap: 35px;
+        padding-top: 120px;
+        padding-bottom: 55px;
+    }
+
+    .hero-section .hero-details .title {
+        font-size: 1.8rem;
+    }
+
+    .hero-section .hero-details .subtitle {
+        font-size: 1.35rem;
+        line-height: 1.5;
+        margin: 15px 0 20px;
+    }
+
+    .hero-section .hero-details .description {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .hero-section .hero-details .buttons {
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .hero-section .hero-details .button {
+        padding: 11px 20px;
+        font-size: 0.85rem;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 330px;
+    }
+
+    .hero-section .available-sticker {
+        width: 90px;
+        right: 20%;
+        top: 0;
+    }
+
+    /* About section  */
+
+    .about-section {
+        padding: 65px 0;
+    }
+
+    .about-section .section-content {
+        gap: 30px;
+    }
+
+    .about-section .about-image-wrapper {
+        width: min(280px, 85vw);
+        height: 340px;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        padding-bottom: 0;
+    }
+
+    .about-section .about-details .section-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .about-section .about-details .text {
+        font-size: 0.9rem;
+        line-height: 1.9;
+        margin: 25px 0;
+    }
+
+    .about-section .social-link-list {
+        gap: 30px;
+    }
+
+    /* Testimonials section  */
+
+    .testimonials-section {
+        padding: 65px 0 75px;
+    }
+
+    .testimonials-section .section-title {
+        font-size: var(--font-size-xl);
+        margin-bottom: 45px;
+    }
+
+    .testimonials-section .testimonials-container {
+        display: block;
+    }
+
+    .testimonials-section .testimonials-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .testimonials-section .testimonial {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .testimonials-section .testimonial .user-image {
+        width: 125px;
+        height: 125px;
+        margin-bottom: 20px;
+    }
+
+    .testimonials-section .testimonial .name {
+        margin-bottom: 12px;
+    }
+
+    .testimonials-section .testimonial .feedback {
+        font-size: var(--font-size-s);
+        line-height: 1.8;
+    }
+
+    /* Hide inactive slider controls  */
+
+    .testimonials-section .slider-button,
+    .testimonials-section .slider-pagination {
+        display: none;
+    }
+
+    /* Books section  */
+
+    .books-section {
+        padding: 65px 0 80px;
+    }
+
+    .books-section .section-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .books-section .section-description {
+        font-size: var(--font-size-s);
+    }
+
+    .books-section .books-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 65px;
+        margin-top: 50px;
+    }
+
+    .books-section .book-item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .books-section .book-image-wrapper {
+        height: 370px;
+    }
+
+    .books-section .book-details {
+        padding-top: 20px;
+    }
+
+    .books-section .book-title {
+        font-size: 1.35rem;
+    }
+
+    .books-section .book-description {
+        min-height: 0;
+    }
+
+    /* Contact section  */
+
+    .contact-section {
+        padding: 65px 0 75px;
+    }
+
+    .contact-section .section-title {
+        font-size: var(--font-size-xl);
+        margin-bottom: 45px;
+    }
+
+    .contact-section .contact-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact-section .contact-info,
+    .contact-section .contact-social {
+        width: 100%;
+    }
+
+    .contact-section .contact-title {
+        font-size: 1.3rem;
+    }
+
+    .contact-section .contact-description {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .contact-section .contact-info-item {
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .contact-section .contact-info-item a,
+    .contact-section .contact-info-item p {
+        font-size: 0.9rem;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-section .social-link-list {
+        gap: 25px;
+    }
+
+    /* Footer section  */
+
+    .footer-section {
+        padding: 35px 0;
+    }
+
+    .footer-section .section-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section .copyright-text {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .footer-section .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================
+   Small mobile phones
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    /* Hero section  */
+
+    .hero-section .hero-details .title {
+        font-size: 1.6rem;
+    }
+
+    .hero-section .hero-details .subtitle {
+        font-size: 1.15rem;
+    }
+
+    .hero-section .hero-details .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section .hero-details .button {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 280px;
+    }
+
+    .hero-section .available-sticker {
+        width: 75px;
+    }
+
+    /* About section  */
+
+    .about-section .about-image-wrapper {
+        width: 240px;
+        height: 300px;
+    }
+
+    /* Books section  */
+
+    .books-section .book-image-wrapper {
+        height: 310px;
+    }
+
+}
+
+
+/* =========================================
+   Accessibility
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-section .available-sticker {
+        animation: none;
+    }
+
+    .books-section .book-image {
+        transition: none;
+    }
+
+}
